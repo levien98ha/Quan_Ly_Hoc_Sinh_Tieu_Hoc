@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 16.875" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="0cd7336a-3c16-4965-ae3c-429582fe28f8" absoluteBounds="5.375, 1.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/ACCOUNT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09d9f635-6323-46fc-add1-52e566eb957d" absoluteBounds="5.39, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40888100-574f-4b03-af31-291e7a8ae697" absoluteBounds="3.5, 11.375, 2, 5.2323225911458344">
+      <DataClassMoniker Name="/DataClasses1DataContext/BANGDIEM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f41a8801-0c37-4543-8a20-0942469b0108" absoluteBounds="3.515, 11.835, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66fee9b1-5b65-4cc1-be61-9b859ed4b0a4" absoluteBounds="0.75, 8.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/DataClasses1DataContext/BANGMONHOC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15abdcb4-b50a-48c0-ac15-ca0f0933bfa1" absoluteBounds="0.765, 8.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f96aec8-ac48-4e9c-b05e-7c8994dec474" absoluteBounds="3.5, 8.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClasses1DataContext/BANGGIAOVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da8f52da-8f68-421c-96a2-17bc7f0e8a4d" absoluteBounds="3.515, 8.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="179174c1-6f2c-4a37-922f-6507d43e94b8" absoluteBounds="9, 7.25, 2, 3.5016097005208335">
+      <DataClassMoniker Name="/DataClasses1DataContext/BANGHOCSINH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="609da5f9-f497-4379-ba8b-684fb40b67f5" absoluteBounds="9.015, 7.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="09ae97fd-a9ed-4f05-9a9f-c3788962771d" absoluteBounds="3.5, 5.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClasses1DataContext/BANGKHOI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17b586fc-e6c1-4569-83b3-c70f1fd753b3" absoluteBounds="3.515, 5.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b255d569-0a5e-467e-a0b4-b28188860ba3" absoluteBounds="6.25, 8.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/BANGLOPHOC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38c6edfd-f340-4a13-9fa6-23b135df82a9" absoluteBounds="6.265, 8.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 9.7612939453125); (1.75 : 13.9911612955729); (3.5 : 13.9911612955729)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/BANGMONHOC/BANGMONHOC_BANGDIEM" />
+      <nodes>
+        <classShapeMoniker Id="66fee9b1-5b65-4cc1-be61-9b859ed4b0a4" />
+        <classShapeMoniker Id="40888100-574f-4b03-af31-291e7a8ae697" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.06814697265625); (3.5 : 9.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/BANGMONHOC/BANGMONHOC_BANGGIAOVIEN" />
+      <nodes>
+        <classShapeMoniker Id="66fee9b1-5b65-4cc1-be61-9b859ed4b0a4" />
+        <classShapeMoniker Id="2f96aec8-ac48-4e9c-b05e-7c8994dec474" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10 : 10.7516097005208); (10 : 13.9911612955729); (5.5 : 13.9911612955729)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/BANGHOCSINH/BANGHOCSINH_BANGDIEM" />
+      <nodes>
+        <classShapeMoniker Id="179174c1-6f2c-4a37-922f-6507d43e94b8" />
+        <classShapeMoniker Id="40888100-574f-4b03-af31-291e7a8ae697" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 9.03929768880208); (9 : 9.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/BANGLOPHOC/BANGLOPHOC_BANGHOCSINH" />
+      <nodes>
+        <classShapeMoniker Id="b255d569-0a5e-467e-a0b4-b28188860ba3" />
+        <classShapeMoniker Id="179174c1-6f2c-4a37-922f-6507d43e94b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.03929768880208); (6.25 : 9.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/BANGGIAOVIEN/BANGGIAOVIEN_BANGLOPHOC" />
+      <nodes>
+        <classShapeMoniker Id="2f96aec8-ac48-4e9c-b05e-7c8994dec474" />
+        <classShapeMoniker Id="b255d569-0a5e-467e-a0b4-b28188860ba3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.09699625651042); (7.25 : 6.09699625651042); (7.25 : 8.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/BANGKHOI/BANGKHOI_BANGLOPHOC" />
+      <nodes>
+        <classShapeMoniker Id="09ae97fd-a9ed-4f05-9a9f-c3788962771d" />
+        <classShapeMoniker Id="b255d569-0a5e-467e-a0b4-b28188860ba3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

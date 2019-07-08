@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="THUCHANHDOTNET" Class="DataClasses3DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-CQOEJHG\SQLEXPRESS;Initial Catalog=THUCHANHDOTNET;Integrated Security=True" SettingsObjectName="DOTNETTHANGTIEN.Properties.Settings" SettingsPropertyName="THUCHANHDOTNETConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BANGMONHOC" Member="BANGMONHOCs">
+    <Type Name="BANGMONHOC">
+      <Column Name="[Mã môn học]" Member="Mã_môn_học" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Tên môn học]" Member="Tên_môn_học" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Hệ số môn học]" Member="Hệ_số_môn_học" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BANGMONHOC_BANGDIEM" Member="BANGDIEMs" ThisKey="Mã_môn_học" OtherKey="Mã_môn_học" Type="BANGDIEM" />
+      <Association Name="BANGMONHOC_BANGGIAOVIEN" Member="BANGGIAOVIENs" ThisKey="Mã_môn_học" OtherKey="Mã_môn_học" Type="BANGGIAOVIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANGDIEM" Member="BANGDIEMs">
+    <Type Name="BANGDIEM">
+      <Column Name="ID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Mã học sinh]" Member="Mã_học_sinh" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã môn học]" Member="Mã_môn_học" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Điểm giữa kì 1_I]" Member="Điểm_giữa_kì_1_I" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Điểm cuối kì 1_I]" Member="Điểm_cuối_kì_1_I" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Điểm giữa kì 2_I]" Member="Điểm_giữa_kì_2_I" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 2_I]" Member="Điểm_cuối_kì_2_I" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm giữa kì 3_II]" Member="Điểm_giữa_kì_3_II" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 3_II]" Member="Điểm_cuối_kì_3_II" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm giữa kì 4_II]" Member="Điểm_giữa_kì_4_II" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 4_II]" Member="Điểm_cuối_kì_4_II" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm giữa kì 5_III]" Member="Điểm_giữa_kì_5_III" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 5_III]" Member="Điểm_cuối_kì_5_III" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm giữa kì 6_III]" Member="Điểm_giữa_kì_6_III" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 6_III]" Member="Điểm_cuối_kì_6_III" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm giữa kì 7_IV]" Member="Điểm_giữa_kì_7_IV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 7_IV]" Member="Điểm_cuối_kì_7_IV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm giữa kì 8_IV]" Member="Điểm_giữa_kì_8_IV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 8_IV]" Member="Điểm_cuối_kì_8_IV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm giũa kì 9_V]" Member="Điểm_giũa_kì_9_V" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 9_V]" Member="Điểm_cuối_kì_9_V" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm giữa kì 10_V]" Member="Điểm_giữa_kì_10_V" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Điểm cuối kì 10_V]" Member="Điểm_cuối_kì_10_V" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BANGMONHOC_BANGDIEM" Member="BANGMONHOC" ThisKey="Mã_môn_học" OtherKey="Mã_môn_học" Type="BANGMONHOC" IsForeignKey="true" />
+      <Association Name="BANGHOCSINH_BANGDIEM" Member="BANGHOCSINH" ThisKey="Mã_học_sinh" OtherKey="Mã_học_sinh" Type="BANGHOCSINH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANGHOCSINH" Member="BANGHOCSINHs">
+    <Type Name="BANGHOCSINH">
+      <Column Name="[Mã học sinh]" Member="Mã_học_sinh" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Tên học sinh]" Member="Tên_học_sinh" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã lớp]" Member="Mã_lớp" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã khối]" Member="Mã_khối" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã giáo viên]" Member="Mã_giáo_viên" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Ngày sinh]" Member="Ngày_sinh" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Giới tính]" Member="Giới_tính" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[Hộ khẩu thường trú]" Member="Hộ_khẩu_thường_trú" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="[Họ và tên cha]" Member="Họ_và_tên_cha" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Nghề nghiệp cha]" Member="Nghề_nghiệp_cha" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Họ và tên mẹ]" Member="Họ_và_tên_mẹ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Nghề nghiệp mẹ]" Member="Nghề_nghiệp_mẹ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Sổ hộ nghèo]" Member="Sổ_hộ_nghèo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[Khuyết tật]" Member="Khuyết_tật" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BANGHOCSINH_BANGDIEM" Member="BANGDIEMs" ThisKey="Mã_học_sinh" OtherKey="Mã_học_sinh" Type="BANGDIEM" />
+      <Association Name="BANGLOPHOC_BANGHOCSINH" Member="BANGLOPHOC" ThisKey="Mã_lớp" OtherKey="Mã_lớp" Type="BANGLOPHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANGKHOI" Member="BANGKHOIs">
+    <Type Name="BANGKHOI">
+      <Column Name="[Mã khối]" Member="Mã_khối" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Tên khối]" Member="Tên_khối" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="BANGKHOI_BANGLOPHOC" Member="BANGLOPHOCs" ThisKey="Mã_khối" OtherKey="Mã_khối" Type="BANGLOPHOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANGLOPHOC" Member="BANGLOPHOCs">
+    <Type Name="BANGLOPHOC">
+      <Column Name="[Mã lớp]" Member="Mã_lớp" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Tên lớp]" Member="Tên_lớp" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã giáo viên]" Member="Mã_giáo_viên" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã khối]" Member="Mã_khối" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="BANGLOPHOC_BANGHOCSINH" Member="BANGHOCSINHs" ThisKey="Mã_lớp" OtherKey="Mã_lớp" Type="BANGHOCSINH" />
+      <Association Name="BANGKHOI_BANGLOPHOC" Member="BANGKHOI" ThisKey="Mã_khối" OtherKey="Mã_khối" Type="BANGKHOI" IsForeignKey="true" />
+      <Association Name="BANGGIAOVIEN_BANGLOPHOC" Member="BANGGIAOVIEN" ThisKey="Mã_giáo_viên" OtherKey="Mã_giáo_viên" Type="BANGGIAOVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANGGIAOVIEN" Member="BANGGIAOVIENs">
+    <Type Name="BANGGIAOVIEN">
+      <Column Name="[Mã giáo viên]" Member="Mã_giáo_viên" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Tên giáo viên]" Member="Tên_giáo_viên" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Chủ nhiệm]" Member="Chủ_nhiệm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="[Mã môn học]" Member="Mã_môn_học" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="[Mã lớp]" Member="Mã_lớp" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="[Dạy lớp]" Member="Dạy_lớp" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="BANGGIAOVIEN_BANGLOPHOC" Member="BANGLOPHOCs" ThisKey="Mã_giáo_viên" OtherKey="Mã_giáo_viên" Type="BANGLOPHOC" />
+      <Association Name="BANGMONHOC_BANGGIAOVIEN" Member="BANGMONHOC" ThisKey="Mã_môn_học" OtherKey="Mã_môn_học" Type="BANGMONHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
+    <Type Name="ACCOUNT">
+      <Column Name="[Tên người dùng]" Member="Tên_người_dùng" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
